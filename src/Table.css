@@ -1,0 +1,11 @@
+table{
+    width: 100%;
+    
+}
+
+th{
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+    padding: 8px 12px;
+}

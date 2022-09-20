@@ -1,5 +1,6 @@
 import { useState } from "react";
 import User from "./User.js";
+import './Table.css'
 const Table = () => {
   const [users, setUsers] = useState([]);
 
@@ -13,14 +14,17 @@ const Table = () => {
     };
     //     // sub format
     // { subName: e.target.name.value, isInEditMode: false };
+    debugger
     setUsers((prev) => [...prev, newUser]);
   };
+
   return (
     <>
       <form onSubmit={addUser}>
         <input type="text" name="name" placeholder="Name" />
         <input type="text" name="age" placeholder="Age" />
         <button type="submit">Add</button>
+        <hr />
       </form>
 
       <table>
