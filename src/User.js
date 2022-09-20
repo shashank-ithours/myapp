@@ -45,7 +45,7 @@ const Table = ({ users, setUsers, user, userIndex }) => {
   const addSub = (userIndex) => {
     let newSubject = [...users];
     let subName = prompt("enter your subject name");
-debugger
+
     let subValue = {
       sub: subName,
       isInEditMode: true,
