@@ -12,6 +12,7 @@ const Subjects = ({
   const toggleEditSubject = (i) => {
     let tmpUsers = { ...user };
     let sub = { ...subject, isInEditMode: !subject.isInEditMode };
+    debugger
     console.log(sub);
     tmpUsers.subjects[subjectIndex] = sub;
 

@@ -7,7 +7,7 @@ const Table = ({ users, setUsers, user, userIndex }) => {
     let editStud = [...users];
     editStud = editStud.map((val, idx) => {
       if (i === idx) {
-        editStud[idx].isInEditMode = !editStud[idx].isInEditMode;
+        val.isInEditMode = !val.isInEditMode;
       }
       return val;
     });
@@ -35,6 +35,7 @@ const Table = ({ users, setUsers, user, userIndex }) => {
     let updatedstudent = [...users];
     updatedstudent = updatedstudent.map((val, idx) => {
       if (i === idx) {
+        
         val = updatedUser;
       }
       return val;
@@ -45,7 +46,6 @@ const Table = ({ users, setUsers, user, userIndex }) => {
   const addSub = (userIndex) => {
     let newSubject = [...users];
     let subName = prompt("enter your subject name");
-
     let subValue = {
       sub: subName,
       isInEditMode: true,

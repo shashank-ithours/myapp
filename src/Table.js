@@ -1,20 +1,20 @@
 import { useState } from "react";
 import User from "./User.js";
-import './Table.css'
+import "./Table.css";
 const Table = () => {
   const [users, setUsers] = useState([]);
 
   const addUser = (e) => {
     e.preventDefault();
+    let name = e.target.name.value;
+    let age = e.target.age.value;
     let newUser = {
-      name: e.target.name.value,
-      age: e.target.age.value,
+      name,
+      age,
       isInEditMode: false,
       subjects: [],
     };
-    //     // sub format
-    // { subName: e.target.name.value, isInEditMode: false };
-    debugger
+    
     setUsers((prev) => [...prev, newUser]);
   };
 
